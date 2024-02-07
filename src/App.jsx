@@ -40,11 +40,11 @@ function App() {
   }, [length, isNumberAllowed, isCharacterAllowed, generatePassword]);
 
   return (
-    <div className="w-[600px] flex flex-col gap-10 items-center justify-center mx-auto h-screen ">
+    <div className="px-10 md:px-0 md:w-[600px] flex flex-col gap-10 items-center justify-center md:mx-auto h-screen">
       <div className="absolute top-4 w-screen  py-4 text-center text-3xl text-white from-stone-400">
         Password Generator
       </div>
-      <div className="h-10 w-full flex flex-row">
+      <div className="h-10 w-full flex flex-row ">
         <input
           type="text"
           value={password}
@@ -61,7 +61,7 @@ function App() {
         </button>
       </div>
 
-      <div className="w-full flex flex-row justify-center gap-4 text-white">
+      <div className="w-full flex flex-col md:flex-row justify-center gap-4 text-white">
         <input
           type="range"
           name="length"
