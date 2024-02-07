@@ -40,7 +40,7 @@ function App() {
   }, [length, isNumberAllowed, isCharacterAllowed, generatePassword]);
 
   return (
-    <div className="px-10 md:px-0 md:w-[600px] flex flex-col gap-10 items-center justify-center md:mx-auto h-screen">
+    <div className="px-10 md:px-0 md:w-[600px] flex flex-col gap-10 items-center justify-center md:mx-auto h-screen w-screen">
       <div className="absolute top-4 w-screen  py-4 text-center text-3xl text-white from-stone-400">
         Password Generator
       </div>
@@ -103,6 +103,10 @@ function App() {
           </label>
         </div>
       </div>
+
+      <button
+      className="hover:opacity-90 hover:scale-105 bg-blue-500 px-6 py-1 text-white rounded-md" onClick={generatePassword}>Generate New Password</button>
+      
       {notify && (
         <div
           className="w-[400px] bg-blue-500 text-white absolute bottom-10 h-10 rounded flex items-center justify-center 
@@ -112,7 +116,9 @@ function App() {
         </div>
       )}
 
-      <div className="absolute bottom-0 py-4 text-white font-light text-sm w-screen text-right mr-10">Created By: Gaurav Shrestha</div>
+      <div className="absolute bottom-0 py-4 text-white font-light text-sm w-screen text-right mr-10">
+        Created By: Gaurav Shrestha
+      </div>
     </div>
   );
 }
